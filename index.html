@@ -444,7 +444,7 @@
 <div class="page">
 
   <h1 class="title">Path of Exile 2 — Tablet Modifier Guide</h1>
-  <p class="subtitle">Source: <a href="https://docs.google.com/document/d/16yC58-Z45Tuo0KW_-ydStBjFw-YhWSLw/edit" target="_blank" rel="noopener">LilBotQ Tablet Crafting notes</a> &middot; Trade league <select id="league-select" class="league-badge" title="Change the league for all trade search links"></select> <button id="collapse-all-btn" class="collapse-all-btn" type="button">Collapse All</button></p>
+  <p class="subtitle">Source: <a href="https://docs.google.com/document/d/16yC58-Z45Tuo0KW_-ydStBjFw-YhWSLw/edit" target="_blank" rel="noopener">LilBotQ Tablet Crafting notes</a> &middot; Trade league <select id="league-select" class="league-badge" title="Change the league for all trade search links"></select> <button id="collapse-all-btn" class="collapse-all-btn" type="button">Hide Modifiers</button></p>
 
   <div class="general-info">
     <h2>General Info</h2>
@@ -846,7 +846,7 @@ var TRADE_LINKS = {
     var anyExpanded = toggles.some(function (t) {
       return t.getAttribute('aria-expanded') === 'true';
     });
-    allBtn.textContent = anyExpanded ? 'Collapse All' : 'Expand All';
+    allBtn.textContent = anyExpanded ? 'Hide Modifiers' : 'Show Modifiers';
   }
 
   toggles.forEach(function (t) {
@@ -857,7 +857,7 @@ var TRADE_LINKS = {
   });
 
   allBtn.addEventListener('click', function () {
-    var expand = allBtn.textContent === 'Expand All';
+    var expand = allBtn.textContent === 'Show Modifiers';
     toggles.forEach(function (t) { setState(t, expand); });
     syncAllButton();
   });
