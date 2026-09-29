@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>PoE2 Tablet Modifier Guide</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Crect%20x%3D%2216%22%20y%3D%227%22%20width%3D%2232%22%20height%3D%2250%22%20rx%3D%224%22%20fill%3D%22%233a2f22%22%20stroke%3D%22%23c8aa6e%22%20stroke-width%3D%223%22/%3E%0A%20%20%3Crect%20x%3D%2221%22%20y%3D%2213%22%20width%3D%2222%22%20height%3D%2238%22%20rx%3D%221%22%20fill%3D%22none%22%20stroke%3D%22%238a7550%22%20stroke-width%3D%221%22/%3E%0A%20%20%3Cline%20x1%3D%2224%22%20y1%3D%2221%22%20x2%3D%2240%22%20y2%3D%2221%22%20stroke%3D%22%23d4af37%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%3Cline%20x1%3D%2224%22%20y1%3D%2227%22%20x2%3D%2236%22%20y2%3D%2227%22%20stroke%3D%22%23d4af37%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.85%22/%3E%0A%20%20%3Cline%20x1%3D%2224%22%20y1%3D%2233%22%20x2%3D%2239%22%20y2%3D%2233%22%20stroke%3D%22%23d4af37%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.7%22/%3E%0A%20%20%3Cpath%20d%3D%22M27%2040%20L32%2047%20L37%2040%20L32%2044%20Z%22%20fill%3D%22%23d4af37%22/%3E%0A%20%20%3Cline%20x1%3D%2224%22%20y1%3D%2247%22%20x2%3D%2230%22%20y2%3D%2247%22%20stroke%3D%22%23d4af37%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.6%22/%3E%0A%20%20%3Cline%20x1%3D%2234%22%20y1%3D%2247%22%20x2%3D%2240%22%20y2%3D%2247%22%20stroke%3D%22%23d4af37%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.6%22/%3E%0A%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACIElEQVR4nNSXS0tbQRTH/3OTa9ViW7BokDRQm0ViBQumSrvog1K6qHRV+oB+gULbff0A+gXUvUtFEEHEjQtdKUZREF+YhRokihFf8XWTO86MxAfqvTNDJOQHA3cy58z8Z07umXMN5BkDecYrYxTt+ROyKHxQwCRIRL62zbvZEafBaPe/gEXtQUKMMDSg1J7z2Panhp8dq7fZOJ4A2/V/pjHU1T+Fze0DqPD4USm+fa4LZQxvM+v+ho4AtodgPLGbHpuOm1AktryF1/VP037fg6CTnbMAAvP4xBKLV5SXoZztilI4u7CgJtlpbST3IHzZHNAWcAm++FxsXco2/KxSCJBBWoDbznVtCyMPZHkTKcavpjJHm86+XSR3cDcCRqJHorkRqoY0hRWCl7X38OV96Y1jvUMpTM6eQBUlAeMzx6LlksIKQW3QxLuGklvH91I2ewv2cWcCZpYs0XJJ3kNQmALulxAEfJ7zPn/mv+mg9B/IkjqkqK8xEag6czfYHbyScM+QN6EdgpGJI0SeF4vGn3VROgF/pQfh6qLz/sBwShQgH19dvJqzMbVsKC2ALxRfz7B2eG1sYTl9pR92vjD1BPAyi1c6siVZbgRQWEXeMxNeYsmWWVmEL5sD2gJAlp5UPfzQWOcnOmU586V8DugKYF83rRalb783vdD9MJn32JkWJxup7DHa/beGEloBBYwMXWv80b7oZqeXvnJI3u+CUwAAAP//zmbjSQAAAAZJREFUAwD8761WQc1jiQAAAABJRU5ErkJggg==">
 <style>
 /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
 @font-face {
@@ -238,6 +240,58 @@
     margin-bottom: 10px;
   }
 
+  .mod-list.collapsed {
+    display: none;
+  }
+
+  .mod-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-family: "Fontin SmallCaps", "Fontin", Georgia, serif;
+    font-size: 0.86em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+  }
+
+  .mod-toggle:hover {
+    color: var(--accent, var(--gold));
+  }
+
+  .mod-toggle .toggle-icon {
+    display: inline-block;
+    transition: transform 0.15s ease;
+    font-size: 0.8em;
+  }
+
+  .mod-toggle[aria-expanded="false"] .toggle-icon {
+    transform: rotate(-90deg);
+  }
+
+  .collapse-all-btn {
+    display: inline-block;
+    background: var(--mono-bg);
+    border: 1px solid var(--border-gold);
+    color: var(--gold);
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-left: 6px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .collapse-all-btn:hover {
+    border-color: var(--gold);
+    background: rgba(212,175,55,0.08);
+  }
+
   .mod-item {
     display: flex;
     align-items: flex-start;
@@ -370,6 +424,8 @@
   @media print {
     body { background: #fff !important; color: #111 !important; }
     .page { max-width: 100%; padding: 8px 16px; }
+    .mod-list.collapsed { display: block !important; }
+    .mod-toggle, .collapse-all-btn { display: none !important; }
     .general-info, .tablet-section { background: #f7f3ea !important; border-color: #b89b5e !important; }
     .general-info h2, .general-info h3, .tablet-header h2, .mod-item .rank-badge, table.mods th { color: #7a5c14 !important; }
     .mod-item .rank-badge { background: #b89b5e !important; color: #fff !important; }
@@ -388,7 +444,7 @@
 <div class="page">
 
   <h1 class="title">Path of Exile 2 — Tablet Modifier Guide</h1>
-  <p class="subtitle">Source: <a href="https://docs.google.com/document/d/16yC58-Z45Tuo0KW_-ydStBjFw-YhWSLw/edit" target="_blank" rel="noopener">LilBotQ Tablet Crafting notes</a> &middot; Trade league <select id="league-select" class="league-badge" title="Change the league for all trade search links"></select></p>
+  <p class="subtitle">Source: <a href="https://docs.google.com/document/d/16yC58-Z45Tuo0KW_-ydStBjFw-YhWSLw/edit" target="_blank" rel="noopener">LilBotQ Tablet Crafting notes</a> &middot; Trade league <select id="league-select" class="league-badge" title="Change the league for all trade search links"></select> <button id="collapse-all-btn" class="collapse-all-btn" type="button">Collapse All</button></p>
 
   <div class="general-info">
     <h2>General Info</h2>
@@ -402,12 +458,15 @@
     <div class="general-columns">
       <div>
         <h3>Universal Prefixes (valuable on every tablet type)</h3>
+        <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
+        <div class="mod-list">
         <ul class="mini-list">
           <li>Map has <span class="stat-value">#%</span> increased Monster Rarity</li>
           <li><span class="stat-value">#%</span> increased Rarity of Items found in Map</li>
           <li>Map has <span class="stat-value">#%</span> increased number of Rare Monsters</li>
           <li>Monsters have <span class="stat-value">#%</span> increased Effectiveness</li>
         </ul>
+        </div>
         <div class="general-regex-box">
           <code class="regex">"d monster rarity$|ms found i|d number of ra|^monsters h"</code>
         </div>
@@ -415,11 +474,14 @@
 
       <div>
         <h3>Always Look Out For (can roll on any tablet type)</h3>
+        <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
+        <div class="mod-list">
         <ul class="mini-list">
           <li>Map has <span class="stat-value">#</span> additional random Modifier <span class="standout-tag">Standout</span></li>
           <li>Map contains <span class="stat-value">#</span> additional Azmeri Spirit</li>
           <li>Map contains <span class="stat-value">#</span> additional Strongboxes</li>
         </ul>
+        </div>
         <div class="general-regex-box">
           <code class="regex">"l ran| additional az|l stro"</code>
         </div>
@@ -436,12 +498,13 @@
       <span class="tagline">Verisium Remnant chance is the standout mod</span>
     </div>
     <div class="tablet-body">
+      <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
       <div class="mod-list">
         <div class="mod-item"><span class="rank-badge">1</span><span class="mod-text">Expeditions have <span class="stat-value">+(30&ndash;40)%</span> Surpassing chance to contain an additional Verisium Remnant. <span class="standout-tag">Standout</span></span></div>
         <div class="mod-item"><span class="rank-badge">2</span><span class="mod-text">Expeditions contain <span class="stat-value">(1&ndash;2)</span> buried Strongboxes in Map.</span></div>
         <div class="mod-item"><span class="rank-badge">3</span><span class="mod-text">Map contains <span class="stat-value">1</span> additional Azmeri Spirit.</span></div>
+        <div class="priority-note">Supporting-only (need other mods to matter): Additional Verisium Sentry &middot; Chance for Verisium Remnants to add an additional Runic Modifier.</div>
       </div>
-      <div class="priority-note">Supporting-only (need other mods to matter): Additional Verisium Sentry &middot; Chance for Verisium Remnants to add an additional Runic Modifier.</div>
 
       <div class="section-label">Stash search regex</div>
       <code class="regex">"(xped)" "ant$|buri| additional az"</code>
@@ -457,6 +520,7 @@
       <span class="tagline">Additional rerolls is the standout mod &mdash; worth a lot</span>
     </div>
     <div class="tablet-body">
+      <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
       <div class="mod-list">
         <div class="mod-item"><span class="rank-badge">1</span><span class="mod-text">Ritual Altars in Map allow rerolling Favours <span class="stat-value">(1&ndash;3)</span> additional times. <span class="standout-tag">Standout</span></span></div>
         <div class="mod-item"><span class="rank-badge">2</span><span class="mod-text">Ritual Favours in Map have <span class="stat-value">(35&ndash;70)%</span> increased chance to be Omens.</span></div>
@@ -478,6 +542,7 @@
       <span class="tagline">No single standout &mdash; order below is inferred, not explicit in the source</span>
     </div>
     <div class="tablet-body">
+      <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
       <div class="mod-list">
         <div class="mod-item"><span class="rank-badge">1</span><span class="mod-text">Map has <span class="stat-value">(20&ndash;40)%</span> chance to contain four additional Abysses.</span></div>
         <div class="mod-item"><span class="rank-badge">2</span><span class="mod-text"><span class="stat-value">(2&ndash;3)</span> additional Rare Monsters are spawned from Abysses in Map.</span></div>
@@ -500,6 +565,7 @@
       <span class="tagline">No standout mod &mdash; order below is inferred, not explicit in the source</span>
     </div>
     <div class="tablet-body">
+      <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
       <div class="mod-list">
         <div class="mod-item"><span class="rank-badge">1</span><span class="mod-text">Delirium Encounters in Map are <span class="stat-value">(15&ndash;30)%</span> more likely to spawn Unique Bosses.</span></div>
         <div class="mod-item"><span class="rank-badge">2</span><span class="mod-text">Delirium Fog in Map spawns <span class="stat-value">(12&ndash;26)%</span> increased Mirror Shards.</span></div>
@@ -521,6 +587,7 @@
       <span class="tagline">Check current party-play breach strategies &mdash; prices swing with meta</span>
     </div>
     <div class="tablet-body">
+      <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
       <div class="mod-list">
         <div class="mod-item"><span class="rank-badge">1</span><span class="mod-text">Unstable Breaches in Map spawn <span class="stat-value">(1&ndash;2)</span> additional Rare Monsters when Stabilised.</span></div>
         <div class="mod-item"><span class="rank-badge">2</span><span class="mod-text"><span class="stat-value">(5&ndash;20)%</span> increased Effectiveness of Rare Breach Monsters in Map.</span></div>
@@ -541,6 +608,7 @@
       <span class="tagline">No unique suffixes &mdash; value comes from universal prefixes</span>
     </div>
     <div class="tablet-body">
+      <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
       <div class="mod-list">
         <div class="mod-item"><span class="rank-badge">1</span><span class="mod-text">Map has <span class="stat-value">#</span> additional random Modifier.</span></div>
         <div class="mod-item"><span class="rank-badge">2</span><span class="mod-text">The four universal prefixes (Monster Rarity, Rarity of Items, Rare Monster count, Monster Effectiveness) &mdash; good prefixes alone can sell for 1 divine on these.</span></div>
@@ -560,6 +628,7 @@
       <span class="tagline">Strongbox + Azmeri Spirit stacking is extremely valuable</span>
     </div>
     <div class="tablet-body">
+      <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
       <div class="mod-list">
         <div class="mod-item"><span class="rank-badge">1</span><span class="mod-text">Map contains <span class="stat-value">#</span> additional Strongboxes.</span></div>
         <div class="mod-item"><span class="rank-badge">2</span><span class="mod-text">Map contains <span class="stat-value">#</span> additional Azmeri Spirit (stacks with #3 for up to 3 total).</span></div>
@@ -580,6 +649,7 @@
       <span class="tagline">Vaal Beacon &amp; unique monster modifiers</span>
     </div>
     <div class="tablet-body">
+      <button class="mod-toggle" aria-expanded="true" type="button"><span class="toggle-icon">&#9662;</span> Modifiers</button>
       <div class="mod-list">
         <div class="mod-item"><span class="rank-badge">1</span><span class="mod-text"><span class="stat-value">(5&ndash;10)%</span> chance to gain an additional Crystal from Vaal Beacons in Map.</span></div>
         <div class="mod-item"><span class="rank-badge">2</span><span class="mod-text">Unique Monsters have <span class="stat-value">1</span> additional Rare Modifier.</span></div>
@@ -753,6 +823,46 @@ var TRADE_LINKS = {
       }
     });
   });
+})();
+</script>
+<script>
+(function () {
+  var toggles = Array.prototype.slice.call(document.querySelectorAll('.mod-toggle'));
+  var allBtn = document.getElementById('collapse-all-btn');
+
+  function listFor(toggle) {
+    var el = toggle.nextElementSibling;
+    return el && el.classList.contains('mod-list') ? el : null;
+  }
+
+  function setState(toggle, expanded) {
+    var list = listFor(toggle);
+    if (!list) return;
+    toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    list.classList.toggle('collapsed', !expanded);
+  }
+
+  function syncAllButton() {
+    var anyExpanded = toggles.some(function (t) {
+      return t.getAttribute('aria-expanded') === 'true';
+    });
+    allBtn.textContent = anyExpanded ? 'Collapse All' : 'Expand All';
+  }
+
+  toggles.forEach(function (t) {
+    t.addEventListener('click', function () {
+      setState(t, t.getAttribute('aria-expanded') !== 'true');
+      syncAllButton();
+    });
+  });
+
+  allBtn.addEventListener('click', function () {
+    var expand = allBtn.textContent === 'Expand All';
+    toggles.forEach(function (t) { setState(t, expand); });
+    syncAllButton();
+  });
+
+  syncAllButton();
 })();
 </script>
 </body>
