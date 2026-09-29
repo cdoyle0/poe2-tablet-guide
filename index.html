@@ -93,10 +93,21 @@
     background: var(--mono-bg);
     border: 1px solid var(--border-gold);
     color: var(--gold);
-    padding: 2px 10px;
+    padding: 3px 8px;
     border-radius: 3px;
     font-size: 0.85em;
     margin-left: 6px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .league-badge:hover {
+    border-color: var(--gold);
+  }
+
+  .league-badge option {
+    background: var(--card);
+    color: var(--text-main);
   }
 
   /* General info card */
@@ -377,7 +388,7 @@
 <div class="page">
 
   <h1 class="title">Path of Exile 2 — Tablet Modifier Guide</h1>
-  <p class="subtitle">Source: <a href="https://docs.google.com/document/d/16yC58-Z45Tuo0KW_-ydStBjFw-YhWSLw/edit" target="_blank" rel="noopener">LilBotQ Tablet Crafting notes</a> &middot; Trade links target league <span class="league-badge">Forbidden Rites</span></p>
+  <p class="subtitle">Source: <a href="https://docs.google.com/document/d/16yC58-Z45Tuo0KW_-ydStBjFw-YhWSLw/edit" target="_blank" rel="noopener">LilBotQ Tablet Crafting notes</a> &middot; Trade league <select id="league-select" class="league-badge" title="Change the league for all trade search links"></select></p>
 
   <div class="general-info">
     <h2>General Info</h2>
@@ -435,7 +446,7 @@
       <div class="section-label">Stash search regex</div>
       <code class="regex">Verisium Remnant|buried|Azmeri Spirit</code>
 
-      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQXWvDIBSG_8rwuhSNMWrv9w92N0qw8WQIRsWP0RLy36vrBoM2V4LneZ_DeVeUssolodOKfMjGO3RCCaYS1cUC2g4o3wLUv_drAG0a8PbRRhkdfqI1-bn-QZMvrg2-lS3QlIupPlIts7EZ4gM2uqJwDdZMJh-bZKQDo1z2HWN15UuCCCI6OkiyB3DOmORY0D2AMkE6SfCugRAs-wEPktcTtEntzErlWGBPKXhVyr6nz4lzy_z2opxGLzoICYr2x8czurJcII5-HkuCNEZYlHHGfT33ibf_22ZlU1t33u4dC79fzQEAAA" target="_blank" rel="noopener">Trade search &mdash; Forbidden Rites</a>
+      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQXWvDIBSG_8rwuhSNMWrv9w92N0qw8WQIRsWP0RLy36vrBoM2V4LneZ_DeVeUssolodOKfMjGO3RCCaYS1cUC2g4o3wLUv_drAG0a8PbRRhkdfqI1-bn-QZMvrg2-lS3QlIupPlIts7EZ4gM2uqJwDdZMJh-bZKQDo1z2HWN15UuCCCI6OkiyB3DOmORY0D2AMkE6SfCugRAs-wEPktcTtEntzErlWGBPKXhVyr6nz4lzy_z2opxGLzoICYr2x8czurJcII5-HkuCNEZYlHHGfT33ibf_22ZlU1t33u4dC79fzQEAAA" target="_blank" rel="noopener" data-tablet="expedition">Trade search &mdash; <span class="trade-league-label">Forbidden Rites</span></a>
     </div>
   </div>
 
@@ -456,7 +467,7 @@
       <div class="section-label">Stash search regex</div>
       <code class="regex">additional time|Omens|Rerolling|Deferring</code>
 
-      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQzWrDMAyAX6XoXErsJIvTxxi7jWKcRCkCxw6xPVpC3n3ysp7angTSp08_K4RoYgpwXsHPkbyDMwTs02I6i7AdId5n5NwnxWTs4SunIxz_2rjre30AvU8uF36MTZh1E7FLsGEkG3HZYRoYxdtsqad4yhItZNGUTVtJnvYSqKRoVV0KVbwjpFSyqGVTfbwjRFnVqqzbVsF2ycz_1sYN8GLDOWAa_GkP2qWpw0X7UaeAQS84GXLkrs_XFnzuQCE_iTWjsQF53GX7BdilAbBnAQAA" target="_blank" rel="noopener">Trade search &mdash; Forbidden Rites</a>
+      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQzWrDMAyAX6XoXErsJIvTxxi7jWKcRCkCxw6xPVpC3n3ysp7angTSp08_K4RoYgpwXsHPkbyDMwTs02I6i7AdId5n5NwnxWTs4SunIxz_2rjre30AvU8uF36MTZh1E7FLsGEkG3HZYRoYxdtsqad4yhItZNGUTVtJnvYSqKRoVV0KVbwjpFSyqGVTfbwjRFnVqqzbVsF2ycz_1sYN8GLDOWAa_GkP2qWpw0X7UaeAQS84GXLkrs_XFnzuQCE_iTWjsQF53GX7BdilAbBnAQAA" target="_blank" rel="noopener" data-tablet="ritual">Trade search &mdash; <span class="trade-league-label">Forbidden Rites</span></a>
     </div>
   </div>
 
@@ -478,7 +489,7 @@
       <div class="section-label">Stash search regex</div>
       <code class="regex">four additional|spawned from|Abyssal|Desecrated</code>
 
-      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQwWrDMAyGX2XoXIoT24nT295ht1GMkyjD4NghskdLyLvXXrfTmpNA-vQJ_RtQNDERXDYIS7TBwwUIh7Sa3iHsJ4j3BXPvvb8TvX2UboTTz1Ze-tz-5kNIvgy-jUtYbLPNqioLJusirk_YjhnF2-LsYOO5SHStOsalbLomX3tNCM4VE1IcAq3qaqGEOCSqtmI1Yy0_JEQtG8krxRTs18L8_mX8CC9-WAjTGM7Pon2ae1x1mHQiJL3ibKy3_ut_HiwHMloqMWbNZBxhPnfdHygfLceIAQAA" target="_blank" rel="noopener">Trade search &mdash; Forbidden Rites</a>
+      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQwWrDMAyGX2XoXIoT24nT295ht1GMkyjD4NghskdLyLvXXrfTmpNA-vQJ_RtQNDERXDYIS7TBwwUIh7Sa3iHsJ4j3BXPvvb8TvX2UboTTz1Ze-tz-5kNIvgy-jUtYbLPNqioLJusirk_YjhnF2-LsYOO5SHStOsalbLomX3tNCM4VE1IcAq3qaqGEOCSqtmI1Yy0_JEQtG8krxRTs18L8_mX8CC9-WAjTGM7Pon2ae1x1mHQiJL3ibKy3_ut_HiwHMloqMWbNZBxhPnfdHygfLceIAQAA" target="_blank" rel="noopener" data-tablet="abyss">Trade search &mdash; <span class="trade-league-label">Forbidden Rites</span></a>
     </div>
   </div>
 
@@ -499,7 +510,7 @@
       <div class="section-label">Stash search regex</div>
       <code class="regex">Unique Bosses|Mirror Shards|Delirious|Simulacrum</code>
 
-      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQzYoCMQyAX0VyFmktU61nH8GbSKkzmSXQaYf-iDL47puuu6fVUyD58uVngVxcqRkOC8S5UAxwgIx9Te7qEZ5rKI8ZOXdET4nqtDq1QoH1TyP3nZc_pI81tMLN-YpNOBHbJDtG8gXTC6aBUbzPnnoqmyaxyuit0UKIPQ98SxghjFKd3H0C5E4bLaU220-E2ivddVIadlwa87u1CwO82XDOWIe4eQUb6nTFZONoa8ZsE06OAoWv_9cKPneg3J7EmtH5jDzu8vwGu_cQGWkBAAA" target="_blank" rel="noopener">Trade search &mdash; Forbidden Rites</a>
+      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQzYoCMQyAX0VyFmktU61nH8GbSKkzmSXQaYf-iDL47puuu6fVUyD58uVngVxcqRkOC8S5UAxwgIx9Te7qEZ5rKI8ZOXdET4nqtDq1QoH1TyP3nZc_pI81tMLN-YpNOBHbJDtG8gXTC6aBUbzPnnoqmyaxyuit0UKIPQ98SxghjFKd3H0C5E4bLaU220-E2ivddVIadlwa87u1CwO82XDOWIe4eQUb6nTFZONoa8ZsE06OAoWv_9cKPneg3J7EmtH5jDzu8vwGu_cQGWkBAAA" target="_blank" rel="noopener" data-tablet="delirium">Trade search &mdash; <span class="trade-league-label">Forbidden Rites</span></a>
     </div>
   </div>
 
@@ -519,7 +530,7 @@
       <div class="section-label">Stash search regex</div>
       <code class="regex">when Stabilised|Rare Breach Monsters|Hiveblood</code>
 
-      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQzQrCMAyAX0VyFpmbs5tHn8GbSKlbpoGuHf0RZezdTZ2e1FMg-fLlZwQfVIgediPYIZA1sAOPTXTqrBGmJYTHgJzbO1TNdXFI6QDLVxt3HccP0NhoUuGmdMSk64ldazZ0pAO6GaaWUbwPmhoKqySRhdjm9brIipLH_STyqi4LUW1E_ZcQosqrMt8ImE6JeS-lTAs_Fhg8xtau5iBN7M_opO1k9Oilw16RIXP5Pibja1ry6Qes6ZT2yONO0xNbmwLWRgEAAA" target="_blank" rel="noopener">Trade search &mdash; Forbidden Rites</a>
+      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQzQrCMAyAX0VyFpmbs5tHn8GbSKlbpoGuHf0RZezdTZ2e1FMg-fLlZwQfVIgediPYIZA1sAOPTXTqrBGmJYTHgJzbO1TNdXFI6QDLVxt3HccP0NhoUuGmdMSk64ldazZ0pAO6GaaWUbwPmhoKqySRhdjm9brIipLH_STyqi4LUW1E_ZcQosqrMt8ImE6JeS-lTAs_Fhg8xtau5iBN7M_opO1k9Oilw16RIXP5Pibja1ry6Qes6ZT2yONO0xNbmwLWRgEAAA" target="_blank" rel="noopener" data-tablet="breach">Trade search &mdash; <span class="trade-league-label">Forbidden Rites</span></a>
     </div>
   </div>
 
@@ -538,7 +549,7 @@
       <div class="section-label">Stash search regex</div>
       <code class="regex">(?=.*Irradiated)(?=.*(random Mod|Rarity|Effect))</code>
 
-      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQy2rDMBBFf6VoHYIelq3kD7LvrgShWOMyYEtGj9Ji8u8dNe2q8Uqge-YMczeWiys1s_PG4lowBnZmGcaa3G0Gdj-w8rUC_V1Sch5dAf_y2qLCDj-jNPm2_UFjrKEFH26u0JQLkk-QZcK5QHrA6AmFz3XGEcuxSaw2RgvZmYE2PgU60cleK6PkHiEV7zmXZjjtEWo4KaE1N_sO3lPOpSDHtTG_d7ng2ZMb1gzVx-PjsaEuN0g2TrZmyDbB4jBgeP_fB6dCPOZWI2kmN2egddf7N2kXV1mNAQAA" target="_blank" rel="noopener">Trade search &mdash; Forbidden Rites</a>
+      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQy2rDMBBFf6VoHYIelq3kD7LvrgShWOMyYEtGj9Ji8u8dNe2q8Uqge-YMczeWiys1s_PG4lowBnZmGcaa3G0Gdj-w8rUC_V1Sch5dAf_y2qLCDj-jNPm2_UFjrKEFH26u0JQLkk-QZcK5QHrA6AmFz3XGEcuxSaw2RgvZmYE2PgU60cleK6PkHiEV7zmXZjjtEWo4KaE1N_sO3lPOpSDHtTG_d7ng2ZMb1gzVx-PjsaEuN0g2TrZmyDbB4jBgeP_fB6dCPOZWI2kmN2egddf7N2kXV1mNAQAA" target="_blank" rel="noopener" data-tablet="irradiated">Trade search &mdash; <span class="trade-league-label">Forbidden Rites</span></a>
     </div>
   </div>
 
@@ -558,7 +569,7 @@
       <div class="section-label">Stash search regex</div>
       <code class="regex">Strongbox|Azmeri Spirit</code>
 
-      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQywrCMBBFf0VmLdJYS6s_4cadSIjtVAbSpGQSUUr_3YmPlboKZM49N5MJOJqYGHYT-DGSd7ADxjYFc7YI8xLifUS5218xMGJYHPIgwvIZlNxx-iCtTy4PrsYmzMKBxKbE0ZONEn_C1AmKt9FSS3GVJbpcbwrVlFXZSOFvomrUeqsK9Q-o66ra1kVTwnzKyPtJxnXwo35kTJ1fvQ7t0nDGoH2vEyPrgIMhR-7yvUohu3TE-QdE0xvLKHWn-QFCiDgGRgEAAA" target="_blank" rel="noopener">Trade search &mdash; Forbidden Rites</a>
+      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQywrCMBBFf0VmLdJYS6s_4cadSIjtVAbSpGQSUUr_3YmPlboKZM49N5MJOJqYGHYT-DGSd7ADxjYFc7YI8xLifUS5218xMGJYHPIgwvIZlNxx-iCtTy4PrsYmzMKBxKbE0ZONEn_C1AmKt9FSS3GVJbpcbwrVlFXZSOFvomrUeqsK9Q-o66ra1kVTwnzKyPtJxnXwo35kTJ1fvQ7t0nDGoH2vEyPrgIMhR-7yvUohu3TE-QdE0xvLKHWn-QFCiDgGRgEAAA" target="_blank" rel="noopener" data-tablet="overseer">Trade search &mdash; <span class="trade-league-label">Forbidden Rites</span></a>
     </div>
   </div>
 
@@ -578,19 +589,115 @@
       <div class="section-label">Stash search regex</div>
       <code class="regex">Crystal|Unique Monsters have|Beacon Unique</code>
 
-      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQ2wrCMAxAf0XyLLI6XTe_Y28ipW6ZBLq2rK0oY_9u6uVJfQokJyeXGULUMQU4zOB8JGfhAAG7NOmzQVjWEO8eOdfi6A2u2pyOsH62cddx_gCdSzYXrtokzLqR2CXYMJCJOL1g6hnFmzfUUdxkiRLNrpByV9eCx_0kylKKot5X8j_RlHLbiLKqYDll5r2Utj38WMAHTL3bvIKyaTzjpNygUsCgJhw1WbKX72MKvqankH_AmkGbgDzutDwA_CwVtUYBAAA" target="_blank" rel="noopener">Trade search &mdash; Forbidden Rites</a>
+      <a class="section-label trade-link" href="https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQ2wrCMAxAf0XyLLI6XTe_Y28ipW6ZBLq2rK0oY_9u6uVJfQokJyeXGULUMQU4zOB8JGfhAAG7NOmzQVjWEO8eOdfi6A2u2pyOsH62cddx_gCdSzYXrtokzLqR2CXYMJCJOL1g6hnFmzfUUdxkiRLNrpByV9eCx_0kylKKot5X8j_RlHLbiLKqYDll5r2Utj38WMAHTL3bvIKyaTzjpNygUsCgJhw1WbKX72MKvqankH_AmkGbgDzutDwA_CwVtUYBAAA" target="_blank" rel="noopener" data-tablet="temple">Trade search &mdash; <span class="trade-league-label">Forbidden Rites</span></a>
     </div>
   </div>
 
   </div>
 
   <footer>
-    Tip: each trade link's Stat Filter group defaults to "At least 1" match &mdash; raise that count (e.g. to 2 or 3) on the trade site to find tablets rolled with more of the listed modifiers at once, which tend to be pricier but better-in-slot &middot; trade links target the Forbidden Rites league, are filtered to instant-buyout (async-tradeable) listings only, and may need regenerating once the league rotates.
+    Tip: each trade link's Stat Filter group defaults to "At least 1" match &mdash; raise that count (e.g. to 2 or 3) on the trade site to find tablets rolled with more of the listed modifiers at once, which tend to be pricier but better-in-slot &middot; trade links are filtered to instant-buyout (async-tradeable) listings only.
     <br>Source: <a href="https://docs.google.com/document/d/16yC58-Z45Tuo0KW_-ydStBjFw-YhWSLw/edit" target="_blank" rel="noopener">LilBotQ Tablet Crafting notes</a> &middot; Font: <a href="https://www.exljbris.com/fontin.html" target="_blank" rel="noopener">Fontin</a>, a free font by Jos Buivenga (exljbris).
   </footer>
 
 </div>
 
+<script>
+var TRADE_LINKS = {
+  "Forbidden Rites": {
+    "expedition": "https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQXWvDIBSG_8rwuhSNMWrv9w92N0qw8WQIRsWP0RLy36vrBoM2V4LneZ_DeVeUssolodOKfMjGO3RCCaYS1cUC2g4o3wLUv_drAG0a8PbRRhkdfqI1-bn-QZMvrg2-lS3QlIupPlIts7EZ4gM2uqJwDdZMJh-bZKQDo1z2HWN15UuCCCI6OkiyB3DOmORY0D2AMkE6SfCugRAs-wEPktcTtEntzErlWGBPKXhVyr6nz4lzy_z2opxGLzoICYr2x8czurJcII5-HkuCNEZYlHHGfT33ibf_22ZlU1t33u4dC79fzQEAAA",
+    "ritual": "https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQzWrDMAyAX6XoXErsJIvTxxi7jWKcRCkCxw6xPVpC3n3ysp7angTSp08_K4RoYgpwXsHPkbyDMwTs02I6i7AdId5n5NwnxWTs4SunIxz_2rjre30AvU8uF36MTZh1E7FLsGEkG3HZYRoYxdtsqad4yhItZNGUTVtJnvYSqKRoVV0KVbwjpFSyqGVTfbwjRFnVqqzbVsF2ycz_1sYN8GLDOWAa_GkP2qWpw0X7UaeAQS84GXLkrs_XFnzuQCE_iTWjsQF53GX7BdilAbBnAQAA",
+    "abyss": "https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQwWrDMAyGX2XoXIoT24nT295ht1GMkyjD4NghskdLyLvXXrfTmpNA-vQJ_RtQNDERXDYIS7TBwwUIh7Sa3iHsJ4j3BXPvvb8TvX2UboTTz1Ze-tz-5kNIvgy-jUtYbLPNqioLJusirk_YjhnF2-LsYOO5SHStOsalbLomX3tNCM4VE1IcAq3qaqGEOCSqtmI1Yy0_JEQtG8krxRTs18L8_mX8CC9-WAjTGM7Pon2ae1x1mHQiJL3ibKy3_ut_HiwHMloqMWbNZBxhPnfdHygfLceIAQAA",
+    "delirium": "https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQzYoCMQyAX0VyFmktU61nH8GbSKkzmSXQaYf-iDL47puuu6fVUyD58uVngVxcqRkOC8S5UAxwgIx9Te7qEZ5rKI8ZOXdET4nqtDq1QoH1TyP3nZc_pI81tMLN-YpNOBHbJDtG8gXTC6aBUbzPnnoqmyaxyuit0UKIPQ98SxghjFKd3H0C5E4bLaU220-E2ivddVIadlwa87u1CwO82XDOWIe4eQUb6nTFZONoa8ZsE06OAoWv_9cKPneg3J7EmtH5jDzu8vwGu_cQGWkBAAA",
+    "breach": "https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQzQrCMAyAX0VyFpmbs5tHn8GbSKlbpoGuHf0RZezdTZ2e1FMg-fLlZwQfVIgediPYIZA1sAOPTXTqrBGmJYTHgJzbO1TNdXFI6QDLVxt3HccP0NhoUuGmdMSk64ldazZ0pAO6GaaWUbwPmhoKqySRhdjm9brIipLH_STyqi4LUW1E_ZcQosqrMt8ImE6JeS-lTAs_Fhg8xtau5iBN7M_opO1k9Oilw16RIXP5Pibja1ry6Qes6ZT2yONO0xNbmwLWRgEAAA",
+    "irradiated": "https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQy2rDMBBFf6VoHYIelq3kD7LvrgShWOMyYEtGj9Ji8u8dNe2q8Uqge-YMczeWiys1s_PG4lowBnZmGcaa3G0Gdj-w8rUC_V1Sch5dAf_y2qLCDj-jNPm2_UFjrKEFH26u0JQLkk-QZcK5QHrA6AmFz3XGEcuxSaw2RgvZmYE2PgU60cleK6PkHiEV7zmXZjjtEWo4KaE1N_sO3lPOpSDHtTG_d7ng2ZMb1gzVx-PjsaEuN0g2TrZmyDbB4jBgeP_fB6dCPOZWI2kmN2egddf7N2kXV1mNAQAA",
+    "overseer": "https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQywrCMBBFf0VmLdJYS6s_4cadSIjtVAbSpGQSUUr_3YmPlboKZM49N5MJOJqYGHYT-DGSd7ADxjYFc7YI8xLifUS5218xMGJYHPIgwvIZlNxx-iCtTy4PrsYmzMKBxKbE0ZONEn_C1AmKt9FSS3GVJbpcbwrVlFXZSOFvomrUeqsK9Q-o66ra1kVTwnzKyPtJxnXwo35kTJ1fvQ7t0nDGoH2vEyPrgIMhR-7yvUohu3TE-QdE0xvLKHWn-QFCiDgGRgEAAA",
+    "temple": "https://www.pathofexile.com/trade2/search/poe2/Forbidden%20Rites/H4sIAAAAAAAAA3WQ2wrCMAxAf0XyLLI6XTe_Y28ipW6ZBLq2rK0oY_9u6uVJfQokJyeXGULUMQU4zOB8JGfhAAG7NOmzQVjWEO8eOdfi6A2u2pyOsH62cddx_gCdSzYXrtokzLqR2CXYMJCJOL1g6hnFmzfUUdxkiRLNrpByV9eCx_0kylKKot5X8j_RlHLbiLKqYDll5r2Utj38WMAHTL3bvIKyaTzjpNygUsCgJhw1WbKX72MKvqankH_AmkGbgDzutDwA_CwVtUYBAAA"
+  },
+  "HC Forbidden Rites": {
+    "expedition": "https://www.pathofexile.com/trade2/search/poe2/HC%20Forbidden%20Rites/H4sIAAAAAAAAA3WQXWvDIBSG_8rwuhSNMWrv9w92N0qw8WQIRsWP0RLy36vrBoM2V4LneZ_DeVeUssolodOKfMjGO3RCCaYS1cUC2g4o3wLUv_drAG0a8PbRRhkdfqI1-bn-QZMvrg2-lS3QlIupPlIts7EZ4gM2uqJwDdZMJh-bZKQDo1z2HWN15UuCCCI6OkiyB3DOmORY0D2AMkE6SfCugRAs-wEPktcTtEntzErlWGBPKXhVyr6nz4lzy_z2opxGLzoICYr2x8czurJcII5-HkuCNEZYlHHGfT33ibf_22ZlU1t33u4dC79fzQEAAA",
+    "ritual": "https://www.pathofexile.com/trade2/search/poe2/HC%20Forbidden%20Rites/H4sIAAAAAAAAA3WQzWrDMAyAX6XoXErsJIvTxxi7jWKcRCkCxw6xPVpC3n3ysp7angTSp08_K4RoYgpwXsHPkbyDMwTs02I6i7AdId5n5NwnxWTs4SunIxz_2rjre30AvU8uF36MTZh1E7FLsGEkG3HZYRoYxdtsqad4yhItZNGUTVtJnvYSqKRoVV0KVbwjpFSyqGVTfbwjRFnVqqzbVsF2ycz_1sYN8GLDOWAa_GkP2qWpw0X7UaeAQS84GXLkrs_XFnzuQCE_iTWjsQF53GX7BdilAbBnAQAA",
+    "abyss": "https://www.pathofexile.com/trade2/search/poe2/HC%20Forbidden%20Rites/H4sIAAAAAAAAA3WQwWrDMAyGX2XoXIoT24nT295ht1GMkyjD4NghskdLyLvXXrfTmpNA-vQJ_RtQNDERXDYIS7TBwwUIh7Sa3iHsJ4j3BXPvvb8TvX2UboTTz1Ze-tz-5kNIvgy-jUtYbLPNqioLJusirk_YjhnF2-LsYOO5SHStOsalbLomX3tNCM4VE1IcAq3qaqGEOCSqtmI1Yy0_JEQtG8krxRTs18L8_mX8CC9-WAjTGM7Pon2ae1x1mHQiJL3ibKy3_ut_HiwHMloqMWbNZBxhPnfdHygfLceIAQAA",
+    "delirium": "https://www.pathofexile.com/trade2/search/poe2/HC%20Forbidden%20Rites/H4sIAAAAAAAAA3WQzYoCMQyAX0VyFmktU61nH8GbSKkzmSXQaYf-iDL47puuu6fVUyD58uVngVxcqRkOC8S5UAxwgIx9Te7qEZ5rKI8ZOXdET4nqtDq1QoH1TyP3nZc_pI81tMLN-YpNOBHbJDtG8gXTC6aBUbzPnnoqmyaxyuit0UKIPQ98SxghjFKd3H0C5E4bLaU220-E2ivddVIadlwa87u1CwO82XDOWIe4eQUb6nTFZONoa8ZsE06OAoWv_9cKPneg3J7EmtH5jDzu8vwGu_cQGWkBAAA",
+    "breach": "https://www.pathofexile.com/trade2/search/poe2/HC%20Forbidden%20Rites/H4sIAAAAAAAAA3WQzQrCMAyAX0VyFpmbs5tHn8GbSKlbpoGuHf0RZezdTZ2e1FMg-fLlZwQfVIgediPYIZA1sAOPTXTqrBGmJYTHgJzbO1TNdXFI6QDLVxt3HccP0NhoUuGmdMSk64ldazZ0pAO6GaaWUbwPmhoKqySRhdjm9brIipLH_STyqi4LUW1E_ZcQosqrMt8ImE6JeS-lTAs_Fhg8xtau5iBN7M_opO1k9Oilw16RIXP5Pibja1ry6Qes6ZT2yONO0xNbmwLWRgEAAA",
+    "irradiated": "https://www.pathofexile.com/trade2/search/poe2/HC%20Forbidden%20Rites/H4sIAAAAAAAAA3WQy2rDMBBFf6VoHYIelq3kD7LvrgShWOMyYEtGj9Ji8u8dNe2q8Uqge-YMczeWiys1s_PG4lowBnZmGcaa3G0Gdj-w8rUC_V1Sch5dAf_y2qLCDj-jNPm2_UFjrKEFH26u0JQLkk-QZcK5QHrA6AmFz3XGEcuxSaw2RgvZmYE2PgU60cleK6PkHiEV7zmXZjjtEWo4KaE1N_sO3lPOpSDHtTG_d7ng2ZMb1gzVx-PjsaEuN0g2TrZmyDbB4jBgeP_fB6dCPOZWI2kmN2egddf7N2kXV1mNAQAA",
+    "overseer": "https://www.pathofexile.com/trade2/search/poe2/HC%20Forbidden%20Rites/H4sIAAAAAAAAA3WQywrCMBBFf0VmLdJYS6s_4cadSIjtVAbSpGQSUUr_3YmPlboKZM49N5MJOJqYGHYT-DGSd7ADxjYFc7YI8xLifUS5218xMGJYHPIgwvIZlNxx-iCtTy4PrsYmzMKBxKbE0ZONEn_C1AmKt9FSS3GVJbpcbwrVlFXZSOFvomrUeqsK9Q-o66ra1kVTwnzKyPtJxnXwo35kTJ1fvQ7t0nDGoH2vEyPrgIMhR-7yvUohu3TE-QdE0xvLKHWn-QFCiDgGRgEAAA",
+    "temple": "https://www.pathofexile.com/trade2/search/poe2/HC%20Forbidden%20Rites/H4sIAAAAAAAAA3WQ2wrCMAxAf0XyLLI6XTe_Y28ipW6ZBLq2rK0oY_9u6uVJfQokJyeXGULUMQU4zOB8JGfhAAG7NOmzQVjWEO8eOdfi6A2u2pyOsH62cddx_gCdSzYXrtokzLqR2CXYMJCJOL1g6hnFmzfUUdxkiRLNrpByV9eCx_0kylKKot5X8j_RlHLbiLKqYDll5r2Utj38WMAHTL3bvIKyaTzjpNygUsCgJhw1WbKX72MKvqankH_AmkGbgDzutDwA_CwVtUYBAAA"
+  },
+  "Runes of Aldur": {
+    "expedition": "https://www.pathofexile.com/trade2/search/poe2/Runes%20of%20Aldur/H4sIAAAAAAAAA3WQXWvDIBSG_8rwuhSNMWrv9w92N0qw8WQIRsWP0RLy36vrBoM2V4LneZ_DeVeUssolodOKfMjGO3RCCaYS1cUC2g4o3wLUv_drAG0a8PbRRhkdfqI1-bn-QZMvrg2-lS3QlIupPlIts7EZ4gM2uqJwDdZMJh-bZKQDo1z2HWN15UuCCCI6OkiyB3DOmORY0D2AMkE6SfCugRAs-wEPktcTtEntzErlWGBPKXhVyr6nz4lzy_z2opxGLzoICYr2x8czurJcII5-HkuCNEZYlHHGfT33ibf_22ZlU1t33u4dC79fzQEAAA",
+    "ritual": "https://www.pathofexile.com/trade2/search/poe2/Runes%20of%20Aldur/H4sIAAAAAAAAA3WQzWrDMAyAX6XoXErsJIvTxxi7jWKcRCkCxw6xPVpC3n3ysp7angTSp08_K4RoYgpwXsHPkbyDMwTs02I6i7AdId5n5NwnxWTs4SunIxz_2rjre30AvU8uF36MTZh1E7FLsGEkG3HZYRoYxdtsqad4yhItZNGUTVtJnvYSqKRoVV0KVbwjpFSyqGVTfbwjRFnVqqzbVsF2ycz_1sYN8GLDOWAa_GkP2qWpw0X7UaeAQS84GXLkrs_XFnzuQCE_iTWjsQF53GX7BdilAbBnAQAA",
+    "abyss": "https://www.pathofexile.com/trade2/search/poe2/Runes%20of%20Aldur/H4sIAAAAAAAAA3WQwWrDMAyGX2XoXIoT24nT295ht1GMkyjD4NghskdLyLvXXrfTmpNA-vQJ_RtQNDERXDYIS7TBwwUIh7Sa3iHsJ4j3BXPvvb8TvX2UboTTz1Ze-tz-5kNIvgy-jUtYbLPNqioLJusirk_YjhnF2-LsYOO5SHStOsalbLomX3tNCM4VE1IcAq3qaqGEOCSqtmI1Yy0_JEQtG8krxRTs18L8_mX8CC9-WAjTGM7Pon2ae1x1mHQiJL3ibKy3_ut_HiwHMloqMWbNZBxhPnfdHygfLceIAQAA",
+    "delirium": "https://www.pathofexile.com/trade2/search/poe2/Runes%20of%20Aldur/H4sIAAAAAAAAA3WQzYoCMQyAX0VyFmktU61nH8GbSKkzmSXQaYf-iDL47puuu6fVUyD58uVngVxcqRkOC8S5UAxwgIx9Te7qEZ5rKI8ZOXdET4nqtDq1QoH1TyP3nZc_pI81tMLN-YpNOBHbJDtG8gXTC6aBUbzPnnoqmyaxyuit0UKIPQ98SxghjFKd3H0C5E4bLaU220-E2ivddVIadlwa87u1CwO82XDOWIe4eQUb6nTFZONoa8ZsE06OAoWv_9cKPneg3J7EmtH5jDzu8vwGu_cQGWkBAAA",
+    "breach": "https://www.pathofexile.com/trade2/search/poe2/Runes%20of%20Aldur/H4sIAAAAAAAAA3WQzQrCMAyAX0VyFpmbs5tHn8GbSKlbpoGuHf0RZezdTZ2e1FMg-fLlZwQfVIgediPYIZA1sAOPTXTqrBGmJYTHgJzbO1TNdXFI6QDLVxt3HccP0NhoUuGmdMSk64ldazZ0pAO6GaaWUbwPmhoKqySRhdjm9brIipLH_STyqi4LUW1E_ZcQosqrMt8ImE6JeS-lTAs_Fhg8xtau5iBN7M_opO1k9Oilw16RIXP5Pibja1ry6Qes6ZT2yONO0xNbmwLWRgEAAA",
+    "irradiated": "https://www.pathofexile.com/trade2/search/poe2/Runes%20of%20Aldur/H4sIAAAAAAAAA3WQy2rDMBBFf6VoHYIelq3kD7LvrgShWOMyYEtGj9Ji8u8dNe2q8Uqge-YMczeWiys1s_PG4lowBnZmGcaa3G0Gdj-w8rUC_V1Sch5dAf_y2qLCDj-jNPm2_UFjrKEFH26u0JQLkk-QZcK5QHrA6AmFz3XGEcuxSaw2RgvZmYE2PgU60cleK6PkHiEV7zmXZjjtEWo4KaE1N_sO3lPOpSDHtTG_d7ng2ZMb1gzVx-PjsaEuN0g2TrZmyDbB4jBgeP_fB6dCPOZWI2kmN2egddf7N2kXV1mNAQAA",
+    "overseer": "https://www.pathofexile.com/trade2/search/poe2/Runes%20of%20Aldur/H4sIAAAAAAAAA3WQywrCMBBFf0VmLdJYS6s_4cadSIjtVAbSpGQSUUr_3YmPlboKZM49N5MJOJqYGHYT-DGSd7ADxjYFc7YI8xLifUS5218xMGJYHPIgwvIZlNxx-iCtTy4PrsYmzMKBxKbE0ZONEn_C1AmKt9FSS3GVJbpcbwrVlFXZSOFvomrUeqsK9Q-o66ra1kVTwnzKyPtJxnXwo35kTJ1fvQ7t0nDGoH2vEyPrgIMhR-7yvUohu3TE-QdE0xvLKHWn-QFCiDgGRgEAAA",
+    "temple": "https://www.pathofexile.com/trade2/search/poe2/Runes%20of%20Aldur/H4sIAAAAAAAAA3WQ2wrCMAxAf0XyLLI6XTe_Y28ipW6ZBLq2rK0oY_9u6uVJfQokJyeXGULUMQU4zOB8JGfhAAG7NOmzQVjWEO8eOdfi6A2u2pyOsH62cddx_gCdSzYXrtokzLqR2CXYMJCJOL1g6hnFmzfUUdxkiRLNrpByV9eCx_0kylKKot5X8j_RlHLbiLKqYDll5r2Utj38WMAHTL3bvIKyaTzjpNygUsCgJhw1WbKX72MKvqankH_AmkGbgDzutDwA_CwVtUYBAAA"
+  },
+  "HC Runes of Aldur": {
+    "expedition": "https://www.pathofexile.com/trade2/search/poe2/HC%20Runes%20of%20Aldur/H4sIAAAAAAAAA3WQXWvDIBSG_8rwuhSNMWrv9w92N0qw8WQIRsWP0RLy36vrBoM2V4LneZ_DeVeUssolodOKfMjGO3RCCaYS1cUC2g4o3wLUv_drAG0a8PbRRhkdfqI1-bn-QZMvrg2-lS3QlIupPlIts7EZ4gM2uqJwDdZMJh-bZKQDo1z2HWN15UuCCCI6OkiyB3DOmORY0D2AMkE6SfCugRAs-wEPktcTtEntzErlWGBPKXhVyr6nz4lzy_z2opxGLzoICYr2x8czurJcII5-HkuCNEZYlHHGfT33ibf_22ZlU1t33u4dC79fzQEAAA",
+    "ritual": "https://www.pathofexile.com/trade2/search/poe2/HC%20Runes%20of%20Aldur/H4sIAAAAAAAAA3WQzWrDMAyAX6XoXErsJIvTxxi7jWKcRCkCxw6xPVpC3n3ysp7angTSp08_K4RoYgpwXsHPkbyDMwTs02I6i7AdId5n5NwnxWTs4SunIxz_2rjre30AvU8uF36MTZh1E7FLsGEkG3HZYRoYxdtsqad4yhItZNGUTVtJnvYSqKRoVV0KVbwjpFSyqGVTfbwjRFnVqqzbVsF2ycz_1sYN8GLDOWAa_GkP2qWpw0X7UaeAQS84GXLkrs_XFnzuQCE_iTWjsQF53GX7BdilAbBnAQAA",
+    "abyss": "https://www.pathofexile.com/trade2/search/poe2/HC%20Runes%20of%20Aldur/H4sIAAAAAAAAA3WQwWrDMAyGX2XoXIoT24nT295ht1GMkyjD4NghskdLyLvXXrfTmpNA-vQJ_RtQNDERXDYIS7TBwwUIh7Sa3iHsJ4j3BXPvvb8TvX2UboTTz1Ze-tz-5kNIvgy-jUtYbLPNqioLJusirk_YjhnF2-LsYOO5SHStOsalbLomX3tNCM4VE1IcAq3qaqGEOCSqtmI1Yy0_JEQtG8krxRTs18L8_mX8CC9-WAjTGM7Pon2ae1x1mHQiJL3ibKy3_ut_HiwHMloqMWbNZBxhPnfdHygfLceIAQAA",
+    "delirium": "https://www.pathofexile.com/trade2/search/poe2/HC%20Runes%20of%20Aldur/H4sIAAAAAAAAA3WQzYoCMQyAX0VyFmktU61nH8GbSKkzmSXQaYf-iDL47puuu6fVUyD58uVngVxcqRkOC8S5UAxwgIx9Te7qEZ5rKI8ZOXdET4nqtDq1QoH1TyP3nZc_pI81tMLN-YpNOBHbJDtG8gXTC6aBUbzPnnoqmyaxyuit0UKIPQ98SxghjFKd3H0C5E4bLaU220-E2ivddVIadlwa87u1CwO82XDOWIe4eQUb6nTFZONoa8ZsE06OAoWv_9cKPneg3J7EmtH5jDzu8vwGu_cQGWkBAAA",
+    "breach": "https://www.pathofexile.com/trade2/search/poe2/HC%20Runes%20of%20Aldur/H4sIAAAAAAAAA3WQzQrCMAyAX0VyFpmbs5tHn8GbSKlbpoGuHf0RZezdTZ2e1FMg-fLlZwQfVIgediPYIZA1sAOPTXTqrBGmJYTHgJzbO1TNdXFI6QDLVxt3HccP0NhoUuGmdMSk64ldazZ0pAO6GaaWUbwPmhoKqySRhdjm9brIipLH_STyqi4LUW1E_ZcQosqrMt8ImE6JeS-lTAs_Fhg8xtau5iBN7M_opO1k9Oilw16RIXP5Pibja1ry6Qes6ZT2yONO0xNbmwLWRgEAAA",
+    "irradiated": "https://www.pathofexile.com/trade2/search/poe2/HC%20Runes%20of%20Aldur/H4sIAAAAAAAAA3WQy2rDMBBFf6VoHYIelq3kD7LvrgShWOMyYEtGj9Ji8u8dNe2q8Uqge-YMczeWiys1s_PG4lowBnZmGcaa3G0Gdj-w8rUC_V1Sch5dAf_y2qLCDj-jNPm2_UFjrKEFH26u0JQLkk-QZcK5QHrA6AmFz3XGEcuxSaw2RgvZmYE2PgU60cleK6PkHiEV7zmXZjjtEWo4KaE1N_sO3lPOpSDHtTG_d7ng2ZMb1gzVx-PjsaEuN0g2TrZmyDbB4jBgeP_fB6dCPOZWI2kmN2egddf7N2kXV1mNAQAA",
+    "overseer": "https://www.pathofexile.com/trade2/search/poe2/HC%20Runes%20of%20Aldur/H4sIAAAAAAAAA3WQywrCMBBFf0VmLdJYS6s_4cadSIjtVAbSpGQSUUr_3YmPlboKZM49N5MJOJqYGHYT-DGSd7ADxjYFc7YI8xLifUS5218xMGJYHPIgwvIZlNxx-iCtTy4PrsYmzMKBxKbE0ZONEn_C1AmKt9FSS3GVJbpcbwrVlFXZSOFvomrUeqsK9Q-o66ra1kVTwnzKyPtJxnXwo35kTJ1fvQ7t0nDGoH2vEyPrgIMhR-7yvUohu3TE-QdE0xvLKHWn-QFCiDgGRgEAAA",
+    "temple": "https://www.pathofexile.com/trade2/search/poe2/HC%20Runes%20of%20Aldur/H4sIAAAAAAAAA3WQ2wrCMAxAf0XyLLI6XTe_Y28ipW6ZBLq2rK0oY_9u6uVJfQokJyeXGULUMQU4zOB8JGfhAAG7NOmzQVjWEO8eOdfi6A2u2pyOsH62cddx_gCdSzYXrtokzLqR2CXYMJCJOL1g6hnFmzfUUdxkiRLNrpByV9eCx_0kylKKot5X8j_RlHLbiLKqYDll5r2Utj38WMAHTL3bvIKyaTzjpNygUsCgJhw1WbKX72MKvqankH_AmkGbgDzutDwA_CwVtUYBAAA"
+  },
+  "Standard": {
+    "expedition": "https://www.pathofexile.com/trade2/search/poe2/Standard/H4sIAAAAAAAAA3WQXWvDIBSG_8rwuhSNMWrv9w92N0qw8WQIRsWP0RLy36vrBoM2V4LneZ_DeVeUssolodOKfMjGO3RCCaYS1cUC2g4o3wLUv_drAG0a8PbRRhkdfqI1-bn-QZMvrg2-lS3QlIupPlIts7EZ4gM2uqJwDdZMJh-bZKQDo1z2HWN15UuCCCI6OkiyB3DOmORY0D2AMkE6SfCugRAs-wEPktcTtEntzErlWGBPKXhVyr6nz4lzy_z2opxGLzoICYr2x8czurJcII5-HkuCNEZYlHHGfT33ibf_22ZlU1t33u4dC79fzQEAAA",
+    "ritual": "https://www.pathofexile.com/trade2/search/poe2/Standard/H4sIAAAAAAAAA3WQzWrDMAyAX6XoXErsJIvTxxi7jWKcRCkCxw6xPVpC3n3ysp7angTSp08_K4RoYgpwXsHPkbyDMwTs02I6i7AdId5n5NwnxWTs4SunIxz_2rjre30AvU8uF36MTZh1E7FLsGEkG3HZYRoYxdtsqad4yhItZNGUTVtJnvYSqKRoVV0KVbwjpFSyqGVTfbwjRFnVqqzbVsF2ycz_1sYN8GLDOWAa_GkP2qWpw0X7UaeAQS84GXLkrs_XFnzuQCE_iTWjsQF53GX7BdilAbBnAQAA",
+    "abyss": "https://www.pathofexile.com/trade2/search/poe2/Standard/H4sIAAAAAAAAA3WQwWrDMAyGX2XoXIoT24nT295ht1GMkyjD4NghskdLyLvXXrfTmpNA-vQJ_RtQNDERXDYIS7TBwwUIh7Sa3iHsJ4j3BXPvvb8TvX2UboTTz1Ze-tz-5kNIvgy-jUtYbLPNqioLJusirk_YjhnF2-LsYOO5SHStOsalbLomX3tNCM4VE1IcAq3qaqGEOCSqtmI1Yy0_JEQtG8krxRTs18L8_mX8CC9-WAjTGM7Pon2ae1x1mHQiJL3ibKy3_ut_HiwHMloqMWbNZBxhPnfdHygfLceIAQAA",
+    "delirium": "https://www.pathofexile.com/trade2/search/poe2/Standard/H4sIAAAAAAAAA3WQzYoCMQyAX0VyFmktU61nH8GbSKkzmSXQaYf-iDL47puuu6fVUyD58uVngVxcqRkOC8S5UAxwgIx9Te7qEZ5rKI8ZOXdET4nqtDq1QoH1TyP3nZc_pI81tMLN-YpNOBHbJDtG8gXTC6aBUbzPnnoqmyaxyuit0UKIPQ98SxghjFKd3H0C5E4bLaU220-E2ivddVIadlwa87u1CwO82XDOWIe4eQUb6nTFZONoa8ZsE06OAoWv_9cKPneg3J7EmtH5jDzu8vwGu_cQGWkBAAA",
+    "breach": "https://www.pathofexile.com/trade2/search/poe2/Standard/H4sIAAAAAAAAA3WQzQrCMAyAX0VyFpmbs5tHn8GbSKlbpoGuHf0RZezdTZ2e1FMg-fLlZwQfVIgediPYIZA1sAOPTXTqrBGmJYTHgJzbO1TNdXFI6QDLVxt3HccP0NhoUuGmdMSk64ldazZ0pAO6GaaWUbwPmhoKqySRhdjm9brIipLH_STyqi4LUW1E_ZcQosqrMt8ImE6JeS-lTAs_Fhg8xtau5iBN7M_opO1k9Oilw16RIXP5Pibja1ry6Qes6ZT2yONO0xNbmwLWRgEAAA",
+    "irradiated": "https://www.pathofexile.com/trade2/search/poe2/Standard/H4sIAAAAAAAAA3WQy2rDMBBFf6VoHYIelq3kD7LvrgShWOMyYEtGj9Ji8u8dNe2q8Uqge-YMczeWiys1s_PG4lowBnZmGcaa3G0Gdj-w8rUC_V1Sch5dAf_y2qLCDj-jNPm2_UFjrKEFH26u0JQLkk-QZcK5QHrA6AmFz3XGEcuxSaw2RgvZmYE2PgU60cleK6PkHiEV7zmXZjjtEWo4KaE1N_sO3lPOpSDHtTG_d7ng2ZMb1gzVx-PjsaEuN0g2TrZmyDbB4jBgeP_fB6dCPOZWI2kmN2egddf7N2kXV1mNAQAA",
+    "overseer": "https://www.pathofexile.com/trade2/search/poe2/Standard/H4sIAAAAAAAAA3WQywrCMBBFf0VmLdJYS6s_4cadSIjtVAbSpGQSUUr_3YmPlboKZM49N5MJOJqYGHYT-DGSd7ADxjYFc7YI8xLifUS5218xMGJYHPIgwvIZlNxx-iCtTy4PrsYmzMKBxKbE0ZONEn_C1AmKt9FSS3GVJbpcbwrVlFXZSOFvomrUeqsK9Q-o66ra1kVTwnzKyPtJxnXwo35kTJ1fvQ7t0nDGoH2vEyPrgIMhR-7yvUohu3TE-QdE0xvLKHWn-QFCiDgGRgEAAA",
+    "temple": "https://www.pathofexile.com/trade2/search/poe2/Standard/H4sIAAAAAAAAA3WQ2wrCMAxAf0XyLLI6XTe_Y28ipW6ZBLq2rK0oY_9u6uVJfQokJyeXGULUMQU4zOB8JGfhAAG7NOmzQVjWEO8eOdfi6A2u2pyOsH62cddx_gCdSzYXrtokzLqR2CXYMJCJOL1g6hnFmzfUUdxkiRLNrpByV9eCx_0kylKKot5X8j_RlHLbiLKqYDll5r2Utj38WMAHTL3bvIKyaTzjpNygUsCgJhw1WbKX72MKvqankH_AmkGbgDzutDwA_CwVtUYBAAA"
+  },
+  "Hardcore": {
+    "expedition": "https://www.pathofexile.com/trade2/search/poe2/Hardcore/H4sIAAAAAAAAA3WQXWvDIBSG_8rwuhSNMWrv9w92N0qw8WQIRsWP0RLy36vrBoM2V4LneZ_DeVeUssolodOKfMjGO3RCCaYS1cUC2g4o3wLUv_drAG0a8PbRRhkdfqI1-bn-QZMvrg2-lS3QlIupPlIts7EZ4gM2uqJwDdZMJh-bZKQDo1z2HWN15UuCCCI6OkiyB3DOmORY0D2AMkE6SfCugRAs-wEPktcTtEntzErlWGBPKXhVyr6nz4lzy_z2opxGLzoICYr2x8czurJcII5-HkuCNEZYlHHGfT33ibf_22ZlU1t33u4dC79fzQEAAA",
+    "ritual": "https://www.pathofexile.com/trade2/search/poe2/Hardcore/H4sIAAAAAAAAA3WQzWrDMAyAX6XoXErsJIvTxxi7jWKcRCkCxw6xPVpC3n3ysp7angTSp08_K4RoYgpwXsHPkbyDMwTs02I6i7AdId5n5NwnxWTs4SunIxz_2rjre30AvU8uF36MTZh1E7FLsGEkG3HZYRoYxdtsqad4yhItZNGUTVtJnvYSqKRoVV0KVbwjpFSyqGVTfbwjRFnVqqzbVsF2ycz_1sYN8GLDOWAa_GkP2qWpw0X7UaeAQS84GXLkrs_XFnzuQCE_iTWjsQF53GX7BdilAbBnAQAA",
+    "abyss": "https://www.pathofexile.com/trade2/search/poe2/Hardcore/H4sIAAAAAAAAA3WQwWrDMAyGX2XoXIoT24nT295ht1GMkyjD4NghskdLyLvXXrfTmpNA-vQJ_RtQNDERXDYIS7TBwwUIh7Sa3iHsJ4j3BXPvvb8TvX2UboTTz1Ze-tz-5kNIvgy-jUtYbLPNqioLJusirk_YjhnF2-LsYOO5SHStOsalbLomX3tNCM4VE1IcAq3qaqGEOCSqtmI1Yy0_JEQtG8krxRTs18L8_mX8CC9-WAjTGM7Pon2ae1x1mHQiJL3ibKy3_ut_HiwHMloqMWbNZBxhPnfdHygfLceIAQAA",
+    "delirium": "https://www.pathofexile.com/trade2/search/poe2/Hardcore/H4sIAAAAAAAAA3WQzYoCMQyAX0VyFmktU61nH8GbSKkzmSXQaYf-iDL47puuu6fVUyD58uVngVxcqRkOC8S5UAxwgIx9Te7qEZ5rKI8ZOXdET4nqtDq1QoH1TyP3nZc_pI81tMLN-YpNOBHbJDtG8gXTC6aBUbzPnnoqmyaxyuit0UKIPQ98SxghjFKd3H0C5E4bLaU220-E2ivddVIadlwa87u1CwO82XDOWIe4eQUb6nTFZONoa8ZsE06OAoWv_9cKPneg3J7EmtH5jDzu8vwGu_cQGWkBAAA",
+    "breach": "https://www.pathofexile.com/trade2/search/poe2/Hardcore/H4sIAAAAAAAAA3WQzQrCMAyAX0VyFpmbs5tHn8GbSKlbpoGuHf0RZezdTZ2e1FMg-fLlZwQfVIgediPYIZA1sAOPTXTqrBGmJYTHgJzbO1TNdXFI6QDLVxt3HccP0NhoUuGmdMSk64ldazZ0pAO6GaaWUbwPmhoKqySRhdjm9brIipLH_STyqi4LUW1E_ZcQosqrMt8ImE6JeS-lTAs_Fhg8xtau5iBN7M_opO1k9Oilw16RIXP5Pibja1ry6Qes6ZT2yONO0xNbmwLWRgEAAA",
+    "irradiated": "https://www.pathofexile.com/trade2/search/poe2/Hardcore/H4sIAAAAAAAAA3WQy2rDMBBFf6VoHYIelq3kD7LvrgShWOMyYEtGj9Ji8u8dNe2q8Uqge-YMczeWiys1s_PG4lowBnZmGcaa3G0Gdj-w8rUC_V1Sch5dAf_y2qLCDj-jNPm2_UFjrKEFH26u0JQLkk-QZcK5QHrA6AmFz3XGEcuxSaw2RgvZmYE2PgU60cleK6PkHiEV7zmXZjjtEWo4KaE1N_sO3lPOpSDHtTG_d7ng2ZMb1gzVx-PjsaEuN0g2TrZmyDbB4jBgeP_fB6dCPOZWI2kmN2egddf7N2kXV1mNAQAA",
+    "overseer": "https://www.pathofexile.com/trade2/search/poe2/Hardcore/H4sIAAAAAAAAA3WQywrCMBBFf0VmLdJYS6s_4cadSIjtVAbSpGQSUUr_3YmPlboKZM49N5MJOJqYGHYT-DGSd7ADxjYFc7YI8xLifUS5218xMGJYHPIgwvIZlNxx-iCtTy4PrsYmzMKBxKbE0ZONEn_C1AmKt9FSS3GVJbpcbwrVlFXZSOFvomrUeqsK9Q-o66ra1kVTwnzKyPtJxnXwo35kTJ1fvQ7t0nDGoH2vEyPrgIMhR-7yvUohu3TE-QdE0xvLKHWn-QFCiDgGRgEAAA",
+    "temple": "https://www.pathofexile.com/trade2/search/poe2/Hardcore/H4sIAAAAAAAAA3WQ2wrCMAxAf0XyLLI6XTe_Y28ipW6ZBLq2rK0oY_9u6uVJfQokJyeXGULUMQU4zOB8JGfhAAG7NOmzQVjWEO8eOdfi6A2u2pyOsH62cddx_gCdSzYXrtokzLqR2CXYMJCJOL1g6hnFmzfUUdxkiRLNrpByV9eCx_0kylKKot5X8j_RlHLbiLKqYDll5r2Utj38WMAHTL3bvIKyaTzjpNygUsCgJhw1WbKX72MKvqankH_AmkGbgDzutDwA_CwVtUYBAAA"
+  }
+};
+
+(function () {
+  var select = document.getElementById('league-select');
+  var leagues = Object.keys(TRADE_LINKS);
+
+  leagues.forEach(function (league) {
+    var opt = document.createElement('option');
+    opt.value = league;
+    opt.textContent = league;
+    select.appendChild(opt);
+  });
+  select.value = "Forbidden Rites";
+
+  function applyLeague(league) {
+    var links = TRADE_LINKS[league];
+    if (!links) return;
+    document.querySelectorAll('a.trade-link[data-tablet]').forEach(function (a) {
+      var key = a.getAttribute('data-tablet');
+      if (links[key]) {
+        a.setAttribute('href', links[key]);
+      }
+      var label = a.querySelector('.trade-league-label');
+      if (label) {
+        label.textContent = league;
+      }
+    });
+  }
+
+  select.addEventListener('change', function () {
+    applyLeague(select.value);
+  });
+})();
+</script>
 <script>
 (function () {
   var toast = document.createElement('div');
